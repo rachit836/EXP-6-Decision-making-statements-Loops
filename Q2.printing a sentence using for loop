@@ -1,0 +1,21 @@
+//Rachit Singh
+//080
+//A3
+#include<iostream>
+using namespace std;
+
+int main(){
+    for(int i=0;i<=5;i++){
+        cout<<"My Name is Rachit Singh"<<endl;
+        
+    }
+    return 0;
+}
+
+OUTPUT:
+My Name is Rachit Singh
+My Name is Rachit Singh
+My Name is Rachit Singh
+My Name is Rachit Singh
+My Name is Rachit Singh
+My Name is Rachit Singh
