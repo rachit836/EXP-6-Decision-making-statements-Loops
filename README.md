@@ -1,39 +1,39 @@
+Sure! Here's the **updated and combined experiment journal** with the **hourglass pattern** using nested `for` loops instead of the 5x5 star square.
 
+---
 
-##  **Experiment Journal: Loop-Based Programs in C++**
+## **Experiment Journal: Loop-Based Programs and Nested Loops in C++**
 
 ---
 
 ### 🔹 **Aim:**
 
-To understand and implement basic programs using looping structures (`for` and `while` loops) in C/C++. The programs covered:
+To understand and implement basic and nested looping structures (`for` and `while` loops) in C++. The experiments include:
 
-1. Printing even numbers from 0 to 10 using `for` loop
-2. Printing a sentence using `for` loop
-3. Printing numbers from 1 to 20 using `while` loop
-4. System locker using `while` loop
+1. Printing even numbers from 0 to 10 using a `for` loop
+2. Printing a sentence multiple times using a `for` loop
+3. Printing numbers from 1 to 20 using a `while` loop
+4. Creating a simple system locker using a `while` loop
+5. Generating an hourglass pattern using nested `for` loops
 
 ---
 
 ### 🔹 **Tools Used:**
 
-* Programiz c++ compiler
+* Programiz C++ online compiler
 
 ---
 
 ### 🔹 **Theory:**
 
-In C++, **loops** are used to execute a block of code repeatedly under a certain condition. There are mainly three types of loops:
+Loops in C++ execute a block of code repeatedly based on a condition. The two primary loop structures are:
 
-* `for` loop
-* `while` loop
+* **`for` loop**: Used when the number of iterations is known. Combines initialization, condition check, and increment/decrement in one line.
+* **`while` loop**: Used when the number of iterations is unknown and continues looping while a condition remains true.
 
+---
 
-#### ✅ **Definition of `for` loop:**
-
-A `for` loop is used when the number of iterations is known. It combines initialization, condition checking, and increment/decrement in one line.
-
-**Syntax:**
+#### ✅ **`for` Loop Syntax:**
 
 ```cpp
 for(initialization; condition; increment/decrement) {
@@ -41,11 +41,9 @@ for(initialization; condition; increment/decrement) {
 }
 ```
 
-#### ✅ **Definition of `while` loop:**
+---
 
-A `while` loop is used when the number of iterations is not known in advance. It checks the condition before executing the loop body.
-
-**Syntax:**
+#### ✅ **`while` Loop Syntax:**
 
 ```cpp
 while(condition) {
@@ -55,16 +53,13 @@ while(condition) {
 
 ---
 
-### 🔹 **Program Descriptions, Syntax, and Definitions:**
+### 🔹 **Programs and Descriptions:**
 
 ---
 
-### ✅ **Q1. Printing Even Numbers from 0 to 10 using `for` loop**
+#### ✅ **Q1. Print Even Numbers from 0 to 10 Using `for` Loop**
 
-**Definition:**
-Even numbers are divisible by 2. A `for` loop can be used to iterate through numbers and print even ones.
-
-**Syntax:**
+Prints even numbers by incrementing the loop counter by 2.
 
 ```cpp
 for(int i = 0; i <= 10; i += 2) {
@@ -74,12 +69,9 @@ for(int i = 0; i <= 10; i += 2) {
 
 ---
 
-### ✅ **Q2. Printing a Sentence using `for` loop**
+#### ✅ **Q2. Print a Sentence Using `for` Loop**
 
-**Definition:**
-You can use a `for` loop to repeat a sentence multiple times, such as for display or repetition-based tasks.
-
-**Syntax:**
+Prints the same sentence 5 times.
 
 ```cpp
 for(int i = 1; i <= 5; i++) {
@@ -89,12 +81,9 @@ for(int i = 1; i <= 5; i++) {
 
 ---
 
-### ✅ **Q3. Printing Numbers from 1 to 20 using `while` loop**
+#### ✅ **Q3. Print Numbers from 1 to 20 Using `while` Loop**
 
-**Definition:**
-A `while` loop executes as long as the given condition is true. It is ideal for printing a range when the upper bound is clear.
-
-**Syntax:**
+Prints numbers from 1 to 20 using a condition-checked loop.
 
 ```cpp
 int i = 1;
@@ -106,12 +95,9 @@ while(i <= 20) {
 
 ---
 
-### ✅ **Q4. System Locker using `while` loop**
+#### ✅ **Q4. System Locker Using `while` Loop**
 
-**Definition:**
-This simulates a password-locked system where access is granted only when the correct password is entered. A `while` loop helps repeat the login prompt until successful.
-
-**Syntax:**
+Simulates a password system that keeps prompting until the correct password `"admin123"` is entered.
 
 ```cpp
 string password;
@@ -124,16 +110,74 @@ cout << "Access granted!";
 
 ---
 
-### 🔹 **Conclusion:**
-
-In this set of experiments, we practiced the use of `for` and `while` loops in C++. We successfully:
-
-* Printed number sequences
-* Repeated messages
-* Simulated a basic password-protected system
-
-This helped reinforce our understanding of looping mechanisms and how to apply them in real-world logic.
+### 🔹 **Nested `for` Loops: Hourglass Pattern**
 
 ---
 
+#### ✅ **Theory:**
 
+Nested `for` loops allow iteration over multiple levels, such as rows and columns. They are particularly useful for **pattern printing** tasks like hourglasses, pyramids, and diamonds.
+
+---
+
+#### ✅ **Example: Hourglass Star Pattern**
+
+This program prints an hourglass pattern of stars using nested loops.
+
+**Code:**
+
+```cpp
+int n = 5;
+
+// Upper half
+for(int i = n; i >= 1; i--) {
+    for(int space = 0; space < n - i; space++) {
+        cout << " ";
+    }
+    for(int star = 1; star <= 2*i - 1; star++) {
+        cout << "*";
+    }
+    cout << endl;
+}
+
+// Lower half
+for(int i = 2; i <= n; i++) {
+    for(int space = 0; space < n - i; space++) {
+        cout << " ";
+    }
+    for(int star = 1; star <= 2*i - 1; star++) {
+        cout << "*";
+    }
+    cout << endl;
+}
+```
+
+**Output:**
+
+```
+*********
+ *******
+  *****
+   ***
+    *
+   ***
+  *****
+ *******
+*********
+```
+
+---
+
+### 🔹 **Conclusion:**
+
+Through these experiments, I have:
+
+* Practiced using `for` and `while` loops for repeating tasks and condition-based logic
+* Built a simple password verification system
+* Learned how to use **nested `for` loops** to create structured patterns such as an hourglass
+
+These programs have strengthened my understanding of loops in C++ and shown how they can be applied to solve both simple and complex problems.
+
+---
+
+Would you like help adding variations of the hourglass, comments to the code, or visual explanations for how the loops work?
