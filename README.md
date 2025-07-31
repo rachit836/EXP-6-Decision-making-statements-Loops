@@ -14,7 +14,7 @@ To understand and implement basic and nested looping structures (`for` and `whil
 2. Printing a sentence multiple times using a `for` loop
 3. Printing numbers from 1 to 20 using a `while` loop
 4. Creating a simple system locker using a `while` loop
-5. Generating an hourglass pattern using nested `for` loops
+5. Generating a pattern using nested `for` loops
 
 ---
 
@@ -120,37 +120,42 @@ Nested `for` loops allow iteration over multiple levels, such as rows and column
 
 ---
 
-#### ✅ **Example: Hourglass Star Pattern**
+#### ✅ **Q5. Hourglass Star Pattern**
 
-This program prints an hourglass pattern of stars using nested loops.
+---
 
-**Code:**
+### 🔹 **Algorithm to Print Hourglass Star Pattern**
 
-```cpp
-int n = 5;
+1. **Start**
 
-// Upper half
-for(int i = n; i >= 1; i--) {
-    for(int space = 0; space < n - i; space++) {
-        cout << " ";
-    }
-    for(int star = 1; star <= 2*i - 1; star++) {
-        cout << "*";
-    }
-    cout << endl;
-}
+2. Initialize `n = 5` (number of rows in half of the hourglass).
 
-// Lower half
-for(int i = 2; i <= n; i++) {
-    for(int space = 0; space < n - i; space++) {
-        cout << " ";
-    }
-    for(int star = 1; star <= 2*i - 1; star++) {
-        cout << "*";
-    }
-    cout << endl;
-}
-```
+3. **Upper Half (Inverted Pyramid)**
+
+   * Loop `i` from 0 to `n - 1`:
+
+     1. Loop `j` from 0 to `i`:
+
+        * Print a space `" "`.
+     2. Loop `k` from `i` to `n - 1`:
+
+        * Print `"* "` (star followed by space).
+     3. Move to the next line.
+
+4. **Lower Half (Regular Pyramid)**
+
+   * Loop `i` from `n - 2` down to 0:
+
+     1. Loop `j` from 0 to `i`:
+
+        * Print a space `" "`.
+     2. Loop `k` from `i` to `n - 1`:
+
+        * Print `"* "` (star followed by space).
+     3. Move to the next line.
+
+5. **End**
+
 
 **Output:**
 
@@ -168,6 +173,66 @@ for(int i = 2; i <= n; i++) {
 
 ---
 
+#### ✅ **Q6. pattern no.2**
+
+#### 🔹 **Algorithm:**
+
+1. **Start**
+2. Initialize `n = 5` (number of rows).
+3. Use a loop (`i`) from 1 to `n`:
+
+   * For each row `i`:
+     4\. Use an inner loop (`j`) from 1 to `i`:
+
+     * Print `" * "` (with space for formatting).
+
+     5. Move to the next line (`cout << endl;`).
+4. **End**
+
+#### 🔹 **Output:**
+
+```
+ * 
+ *  * 
+ *  *  * 
+ *  *  *  * 
+ *  *  *  *  * 
+```
+
+---
+#### ✅ **Q7.pattern no.3
+
+#### 🔹 **Algorithm:**
+
+1. **Start**
+2. Initialize `n = 5` (number of rows).
+3. Use a loop (`i`) from 1 to `n`:
+
+   * For each row `i`:
+     4\. Use a loop (`j`) from 1 to `(n - i)`:
+
+     * Print a single space `" "` to shift stars right.
+
+     5. Use another loop (`k`) from 1 to `i`:
+
+        * Print `"*"` (no extra space between stars).
+     6. Move to the next line (`cout << endl;`).
+4. **End**
+
+#### 🔹 **Output:**
+
+```
+    *
+   **
+  ***
+ ****
+*****
+```
+
+---
+
+
+
 ### 🔹 **Conclusion:**
 
 Through these experiments, I have:
@@ -180,4 +245,3 @@ These programs have strengthened my understanding of loops in C++ and shown how 
 
 ---
 
-Would you like help adding variations of the hourglass, comments to the code, or visual explanations for how the loops work?
