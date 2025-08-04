@@ -1,4 +1,4 @@
-Sure! Here's the **updated and combined experiment journal** with the **hourglass pattern** using nested `for` loops instead of the 5x5 star square.
+
 
 ---
 
